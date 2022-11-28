@@ -18,9 +18,9 @@ from django.urls import include, path
 
 urlpatterns = [
     # Дорогой Джанго, если на сервер пришёл любой запрос (''),
-    # перейди в файл urls приложения posts 
+    # перейди в файл urls приложения posts
     # и проверь там все path() на совпадение с запрошенным URL
-    path('', include('posts.urls')),
+    path('', include('posts.urls', namespace='posts')),
 
     path('admin/', admin.site.urls),
 ]
